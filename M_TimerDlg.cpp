@@ -159,11 +159,9 @@ HCURSOR CMTimerDlg::OnQueryDragIcon()
 
 void CMTimerDlg::OnTimer(UINT_PTR nIDEvent)
 {
-	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
-	n++;
 	CFont fnt;
 	fnt.CreatePointFont(400, L"Arial", NULL);
 	GetDlgItem(IDC_STATIC)->SetFont(&fnt);
-	SetDlgItemInt(IDC_STATIC,n);
+	SetDlgItemInt(IDC_STATIC,++n);
 	CDialogEx::OnTimer(nIDEvent);
 }
